@@ -1,0 +1,25 @@
+// Online C++ compiler to run C++ program online
+#include <iostream>
+#include <math.h>
+using namespace std;
+int fact(int n){
+    int fact = 1;
+    for(int i = 2; i <= n ; i++){
+        fact = fact * i;
+    }
+    return fact;
+}
+int main() {
+    int n, r;
+    cout<<"Enter two numbers: ";
+    cin>>n>>r;
+    int nfact = fact(n);
+    cout<<"N factorial: "<<nfact<<endl;
+    int rfact = fact(r);
+    cout<<"R factorial: "<<rfact<<endl;
+    int nrfact = fact(n-r);
+    cout<<"N-R factorial: "<<nrfact<<endl;
+    int ans = (nfact)/(rfact*nrfact);
+    cout<<"Final Answer: "<<ans<<endl;
+    return 0;
+}
