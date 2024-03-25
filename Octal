@@ -1,0 +1,24 @@
+// Online C++ compiler to run C++ program online
+#include <iostream>
+#include <math.h>
+using namespace std;
+void octal(int n1){
+    int num, sum;
+    num  = sum = 0;
+    int x = 1;
+    while(n1>0){
+        num = n1 % 10;
+        sum = sum + (num*x);
+        x = x*8;
+        n1 = n1/10;
+    }
+    cout<<sum;
+    
+}
+int main() {
+    int n1;
+    cin>>n1;
+    octal(n1);
+    
+    return 0;
+}
