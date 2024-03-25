@@ -1,0 +1,21 @@
+// Online C++ compiler to run C++ program online
+#include <iostream>
+#include <math.h>
+using namespace std;
+bool triplet(int n1, int n2, int n3){
+    if(pow(n1,2) == (pow(n2,2) + pow(n3,2))){
+        return true;
+    }
+    return false;
+}
+int main() {
+    int n1,n2,n3;
+    cin>>n1>>n2>>n3;
+
+    if(triplet(n1,n2,n3)){
+        cout<<"It is a pythagorean triplet";
+    } else {
+        cout<<"It is not a pythagorean triplet";
+    }
+    return 0;
+}
