@@ -1,0 +1,20 @@
+// Online C++ compiler to run C++ program online
+#include <iostream>
+using namespace std;
+
+int main() {
+    int rs =15;
+    int choc=0;
+    int wrap=0;
+    while(rs>0){
+        choc = choc+1;
+        rs = rs-1;
+        wrap=wrap+1;
+    }
+    cout<<choc<<endl;
+    while(wrap>=3){
+        choc=choc+1;
+        wrap = wrap-2;
+        }
+    cout<<choc<<endl;
+}
