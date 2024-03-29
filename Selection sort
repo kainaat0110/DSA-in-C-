@@ -1,0 +1,31 @@
+// Online C++ compiler to run C++ program online
+#include <iostream>
+using namespace std;
+void sort(int max[], int n){
+    for(int i = 0 ; i<n-1 ; i++){
+        for(int j = i+1; j<n ; j++){
+            if(max[j]<max[i]){
+                int temp = max[j];
+                max[j] = max[i];
+                max[i] = temp;
+            }
+        }
+    }
+    for(int i = 0 ; i<n; i++){
+        cout<<max[i]<<" ";
+    }
+    
+}
+int main() {
+    int n,k,key;
+    int maxn = 0;
+    cout<<"Enter the size of array: "<<endl;
+    cin>>n;
+    int max[n];
+    cout<<"Enter the elements in array: "<<endl;
+    for(int i = 0; i < n ; i++){
+        cin>>max[i];
+    }
+    sort(max,n);
+    return 0;
+}
