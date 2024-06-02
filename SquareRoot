@@ -1,0 +1,23 @@
+class Solution {
+    public int mySqrt(int x) {
+        if (x < 2) {
+            return x;
+        }
+        int min = 1, max = x / 2;
+        int avg = 0;
+
+        while (min <= max) {
+            avg = min + (max - min) / 2;
+            long squared = (long) avg * avg;
+            if (squared == x) {
+                return avg;
+            } else if (squared < x) {
+                min = avg + 1;
+            } else {
+                max = avg - 1;
+            }
+        }
+
+        return max; 
+    }
+}
